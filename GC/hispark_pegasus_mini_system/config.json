@@ -1,0 +1,73 @@
+{
+    "product_name": "hispark_pegasus_mini_system",
+    "type": "mini",
+    "version": "3.0",
+    "ohos_version": "OpenHarmony 3.1",
+    "device_company": "hisilicon",
+    "device_build_path": "device/board/hisilicon/hispark_pegasus",
+    "board": "hispark_pegasus",
+    "kernel_type": "liteos_m",
+    "kernel_is_prebuilt": true,
+    "kernel_version": "",
+    "subsystems": [
+      {
+        "subsystem": "hiviewdfx",
+        "components": [
+          { "component": "hilog_lite" },
+          { "component": "hievent_lite" },
+          { "component": "hiview_lite" }
+        ]
+      },
+      {
+        "subsystem": "startup",
+        "components": [
+          { "component": "bootstrap_lite" },
+          { "component": "init_lite", "features":
+            [
+              "enable_ohos_startup_init_feature_begetctl_liteos = true"
+            ]
+          }
+        ]
+      },
+      {
+        "subsystem": "communication",
+        "components": [
+          { "component": "dsoftbus" }
+        ]
+      },
+      {
+        "subsystem": "systemabilitymgr",
+        "components": [
+          { "component": "samgr_lite" }
+        ]
+      },
+      {
+        "subsystem": "security",
+        "components": [
+          { "component": "device_auth" },
+          { "component": "huks", "features":
+            [
+              "huks_use_lite_storage = true",
+              "huks_config_file = \"hks_config_lite.h\""
+            ]
+          }
+        ]
+      },
+      {
+        "subsystem": "commonlibrary",
+        "components": [
+          { "component": "utils_lite",
+            "features":[ "utils_lite_feature_kal_timer = true" ]
+          }
+        ]
+      },
+      {
+        "subsystem": "updater",
+        "components": [
+          { "component": "sys_installer_lite" }
+        ]
+      }
+    ],
+    "third_party_dir": "//device/soc/hisilicon/hi3861v100/sdk_liteos/third_party",
+    "product_adapter_dir": "//vendor/hisilicon/hispark_pegasus/hals"
+  }

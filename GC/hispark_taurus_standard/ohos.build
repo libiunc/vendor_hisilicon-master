@@ -1,0 +1,12 @@
+{
+  "parts": {
+    "product_hispark_taurus_standard": {
+      "module_list": [
+        "//vendor/hisilicon/hispark_taurus_standard:hispark_taurus_standard",
+        "//vendor/hisilicon/hispark_taurus_standard/hals/audio:hdf_audio_config",
+	"//vendor/hisilicon/hispark_taurus_standard/hdf_config/uhdf:hdf_config"
+      ]
+    }
+  },
+  "subsystem": "product_hisilicon"
+}

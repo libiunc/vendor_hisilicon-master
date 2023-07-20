@@ -1,0 +1,184 @@
+{
+    "product_name": "ipcamera_hispark_taurus",
+    "version": "3.0",
+    "type": "small",
+    "ohos_version": "OpenHarmony 1.0",
+    "device_company": "hisilicon",
+    "device_build_path": "device/board/hisilicon/hispark_taurus",
+    "board": "hispark_taurus",
+    "api_version": 8,
+    "kernel_type": "liteos_a",
+    "kernel_version": "",
+    "subsystems": [
+      {
+        "subsystem": "ability",
+        "components": [
+          { "component": "ability_lite", "features":[ "enable_ohos_appexecfwk_feature_ability = true" ] },
+          { "component": "dmsfwk_lite", "features":[] }
+        ]
+      },
+      {
+        "subsystem": "applications",
+        "components": [
+          { "component": "camera_sample_app", "features":[] },
+          { "component": "camera_screensaver_app", "features":[] }
+        ]
+      },
+      {
+        "subsystem": "hiviewdfx",
+        "components": [
+          { "component": "hilog_featured_lite", "features":[] },
+          { "component": "hidumper_lite", "features":[] }
+        ]
+      },
+      {
+        "subsystem": "systemabilitymgr",
+        "components": [
+          { "component": "samgr_lite", "features":[] },
+          { "component": "safwk_lite", "features":[] }
+        ]
+      },
+      {
+        "subsystem": "security",
+        "components": [
+          { "component": "permission_lite", "features":[] },
+          { "component": "appverify", "features":[] },
+          { "component": "device_auth", "features":[] },
+          { "component": "device_security_level", "features": [] },
+          { "component": "huks", "features":
+            [
+              "huks_config_file = \"hks_config_small.h\"",
+              "huks_uid_trust_list_define = \"{}\""
+            ]
+          }
+        ]
+      },
+      {
+        "subsystem": "multimedia",
+        "components": [
+          { "component": "camera_lite", "features":[] },
+          { "component": "media_lite", "features":[] },
+          { "component": "audio_manager_lite", "features":[] },
+          { "component": "media_service", "features":[] }
+        ]
+      },
+      {
+        "subsystem": "graphic",
+        "components": [
+          { "component": "graphic_utils_lite", "features":[] },
+          { "component": "surface_lite", "features":[] }
+        ]
+      },
+      {
+        "subsystem": "window",
+        "components": [
+          { "component": "window_manager_lite", "features":[] }
+        ]
+      },
+      {
+        "subsystem": "sensors",
+        "components": [
+          { "component": "sensor_lite", "features":[] }
+        ]
+      },
+      {
+        "subsystem": "startup",
+        "components": [
+          { "component": "bootstrap_lite", "features":[] },
+          { "component": "init_lite", "features":["enable_ohos_startup_init_feature_begetctl_liteos=true"] },
+          { "component": "appspawn_lite", "features":[] }
+        ]
+      },
+      {
+        "subsystem": "updater",
+        "components": [
+          { "component": "sys_installer_lite", "features":[] }
+        ]
+      },
+      {
+        "subsystem": "kernel",
+        "components": [
+          { "component": "liteos_a", "features":[] }
+        ]
+      },
+      {
+        "subsystem": "communication",
+        "components": [
+          { "component": "dsoftbus", "features":[] },
+          { "component": "wpa_supplicant", "features":[] }
+        ]
+      },
+      {
+        "subsystem": "arkui",
+        "components": [
+          { "component": "ace_engine_lite", "features":[ "" ] },
+          { "component": "ui_lite", "features":[ "enable_graphic_font = true" ] }
+        ]
+      },
+      {
+        "subsystem": "hdf",
+        "components": [
+          { "component": "hdf_core", "features":[ "hdf_core_platform_test_support = true" ] },
+          { "component": "drivers_peripheral_display", "features":[] },
+          { "component": "drivers_peripheral_input", "features":[
+            "drivers_peripheral_input_feature_lite_support_test = true"
+          ] },
+          { "component": "drivers_peripheral_sensor", "features":[
+            "drivers_peripheral_sensor_feature_lite_support_test = true"
+          ] },
+          { "component": "drivers_peripheral_wlan", "features":[] },
+          { "component": "drivers_peripheral_vibrator", "features":[
+            "drivers_peripheral_vibrator_feature_lite_support_test = true"
+          ] },
+          { "component": "drivers_peripheral_usb", "features":[] },
+          { "component": "drivers_peripheral_audio", "features":[] },
+          { "component": "drivers_peripheral_light", "features":[
+            "drivers_peripheral_light_feature_lite_support_test = true"
+          ] }
+        ]
+      },
+      {
+        "subsystem": "bundlemanager",
+        "components": [
+          { "component": "bundle_framework_lite", "features":[] }
+        ]
+      },
+      {
+        "subsystem": "global",
+        "components": [
+          { "component": "resource_management_lite", "features":[] },
+          { "component": "i18n_lite", "features":[] }
+        ]
+      },
+      {
+        "subsystem": "xts",
+        "components": [
+          { "component": "developer_test", "features":[] },
+          { "component": "xts_acts", "features":[] },
+          { "component": "xts_tools", "features":[] },
+          { "component": "device_attest_lite", "features":[] }
+        ]
+      },
+      {
+        "subsystem": "ai",
+        "components": [
+          { "component": "ai_engine", "features":[] }
+        ]
+      },
+      {
+        "subsystem": "developtools",
+        "components": [
+          { "component": "syscap_codec", "features":[] }
+        ]
+      },
+      {
+        "subsystem": "powermgr",
+        "components": [
+          { "component": "powermgr_lite", "features":[ "enable_screensaver = true" ] },
+          { "component": "battery_lite", "features":[ "enable_screensaver = true" ] }
+        ]
+      }
+    ],
+    "third_party_dir": "//third_party",
+    "product_adapter_dir": "//vendor/hisilicon/hispark_taurus/hals"
+  }

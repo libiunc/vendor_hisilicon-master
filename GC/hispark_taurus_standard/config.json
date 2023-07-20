@@ -1,0 +1,53 @@
+{
+  "product_name": "hispark_taurus_standard",
+  "device_company": "hisilicon",
+  "device_build_path": "device/board/hisilicon/hispark_taurus/linux",
+  "target_cpu": "arm",
+  "type": "standard",
+  "version": "3.0",
+  "board": "hispark_taurus",
+  "inherit": [ "productdefine/common/base/standard_system.json",
+               "productdefine/common/inherit/ipcamera.json"
+  ],
+  "enable_ramdisk": true,
+  "subsystems": [
+    {
+      "subsystem": "hisilicon_products",
+      "components": [
+        {
+          "component": "hisilicon_products",
+          "features": []
+        }
+      ]
+    },
+    {
+      "subsystem": "arkui",
+      "components": [
+        {
+          "component": "ui_lite",
+          "features": []
+        }
+      ]
+    },
+    {
+      "subsystem": "security",
+      "components": [
+        {
+          "component": "certificate_manager"
+        }
+      ]
+    },
+    {
+      "subsystem": "hdf",
+      "components": [
+        {
+          "component": "drivers_peripheral_wlan",
+          "features": [
+            "drivers_peripheral_wlan_feature_enable_HDF_NL80211 = true",
+            "drivers_peripheral_wlan_feature_enable_HDF_UT = true"
+          ]
+        }
+      ]
+    }     
+  ]
+}

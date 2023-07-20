@@ -1,0 +1,37 @@
+{
+    "product_name": "hispark_taurus_mini_system",
+    "version": "3.0",
+    "type": "small",
+    "ohos_version": "OpenHarmony 3.1",
+    "device_company": "hisilicon",
+    "device_build_path": "device/board/hisilicon/hispark_taurus",
+    "board": "hispark_taurus",
+    "kernel_type": "liteos_a",
+    "kernel_version": "",
+    "inherit": [ "productdefine/common/base/small_system.json" ],
+    "subsystems": [  
+      {
+        "subsystem": "startup",
+        "components": [
+          { "component": "init_lite", "features":
+            [
+              "enable_ohos_startup_init_feature_begetctl_liteos = true"
+            ]
+          }
+        ]
+      },
+      {
+        "subsystem": "security",
+        "components": [
+          { "component": "huks", "features":
+            [
+              "huks_config_file = \"hks_config_small.h\"",
+              "huks_uid_trust_list_define = \"{}\""
+            ]
+          }
+        ]
+      }
+    ],
+    "third_party_dir": "//third_party",
+    "product_adapter_dir": "//vendor/hisilicon/hispark_taurus_mini_system/hals"
+  }
